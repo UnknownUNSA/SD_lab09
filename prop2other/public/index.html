@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Aplicación</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Gestión de Departamentos, Ingenieros y Proyectos</h1>
+    <div id="app">
+        <!-- Formulario para Departamentos -->
+        <h2>Departamentos</h2>
+        <form id="departamentoForm">
+            <input type="text" id="departamentoNombre" placeholder="Nombre" required>
+            <input type="text" id="departamentoTelefono" placeholder="Teléfono" required>
+            <input type="text" id="departamentoFax" placeholder="Fax" required>
+            <button type="submit">Crear Departamento</button>
+        </form>
+        <div id="departamentosList"></div>
+
+        <!-- Formulario para Ingenieros -->
+        <h2>Ingenieros</h2>
+        <form id="ingenieroForm">
+            <input type="text" id="ingenieroEspecialidad" placeholder="Especialidad" required>
+            <input type="text" id="ingenieroCargo" placeholder="Cargo" required>
+            <button type="submit">Crear Ingeniero</button>
+        </form>
+        <div id="ingenierosList"></div>
+
+        <!-- Formulario para Proyectos -->
+        <h2>Proyectos</h2>
+        <form id="proyectoForm">
+            <input type="text" id="proyectoNombre" placeholder="Nombre" required>
+            <input type="date" id="proyectoFecInicio" required>
+            <input type="date" id="proyectoFecTermino" required>
+            <select id="proyectoIDDpto" required>
+                <option value="">Selecciona un Departamento</option>
+            </select>
+            <select id="proyectoIDIng" required>
+                <option value="">Selecciona un Ingeniero</option>
+            </select>
+            <button type="submit">Crear Proyecto</button>
+        </form>
+        <div id="proyectosList"></div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
